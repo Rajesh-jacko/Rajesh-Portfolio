@@ -26,6 +26,9 @@ const ParticlesComponent = (props) => {
       setInit(true);
     });
   }, []);
+  if (!init) {
+    return null; // Or return a loading spinner, or some placeholder content
+  }
 
 
   return <Particles id="particles" options={ColourEffect}  />
