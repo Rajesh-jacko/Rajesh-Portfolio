@@ -4,7 +4,7 @@ function AnimatedBtn() {
   return (
     <div class="">
 
-<a href="#" class="button button--piyo">
+<a href="www" class="button button--piyo">
         <div class="button__wrapper">
             <span class="button__text">Learn More</span>
         </div>
