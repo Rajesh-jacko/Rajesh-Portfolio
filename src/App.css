@@ -613,6 +613,16 @@ body {
 .project-item:hover .project-title {
   color: #ffbf47;
 }
+.nav-btn {
+  transition: transform 0.7s ease, color 0.2s linear,  ;
+}
+.nav-btn:hover {
+  transform: translateY(-6px);
+}
+.nav-btn:hover {
+  color: #f227eb;
+}
+
 .about-me {
   position: relative;
   padding-left: 28px;
