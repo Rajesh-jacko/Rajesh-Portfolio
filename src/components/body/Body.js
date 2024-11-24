@@ -103,7 +103,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
 
   
   return (
-    <div className='max-w-6xl p-4 m-auto'>
+    <div className='max-w-6xl p-4 m-auto' style={{marginTop:'-4px', paddingTop:'0'}}>
       <div className="text-left  h-[calc(100vh-112px)] overflow-y-auto flex flex-col items-start justify-center">
         <section>
           <h2 className="greeting-text">
