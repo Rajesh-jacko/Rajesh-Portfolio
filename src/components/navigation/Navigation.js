@@ -13,7 +13,7 @@ function Navigation() {
       {/* Center: Clickable Text (Hidden on Mobile) */}
       <div className="hidden md:flex space-x-8">
         <a href="#project" className="text-xl hover:underline">
-          Project
+          Projects
         </a>
         <a href="#technologies" className="text-xl hover:underline">
            Technologies
