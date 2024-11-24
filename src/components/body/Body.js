@@ -198,7 +198,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
         </div>
       </div>
       <div className='w-auto h-0.5 text-white bg-slate-600 my-1 mt-20'></div>
-      <div className='flex justify-between text-left  mt-16'>
+      <div className='flex justify-between flex-wrap text-left gap-10 mt-16'>
       <p className='flex flex-col'>
         <span  className=' text-gray-300 mb-5'>PHONE</span>
         <span>+977-9860465506</span>
@@ -212,7 +212,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
       </div>
       <h1
         id="animated"
-        className="color-changing mb-8"
+        className="color-changing my-10"
         dangerouslySetInnerHTML={{ __html: formattedText }}
       />
     </div>
