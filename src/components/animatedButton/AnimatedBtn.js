@@ -1,8 +1,14 @@
 import React from 'react'
 
 function AnimatedBtn() {
+    const goToAboutUs = ()=> {
+        const aboutMe = document.getElementById('about-me');
+        if (aboutMe) {
+            aboutMe.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
   return (
-    <div class="">
+    <div onClick={()=> goToAboutUs()}>
 
 {/* <a href="www" class="button button--piyo">
         <div class="button__wrapper">
@@ -21,7 +27,7 @@ function AnimatedBtn() {
         </div>
     </a> */}
 
-    <a href="www" class="button button--pen">
+    <div class="button button--pen">
         <div class="button__wrapper">
             <span class="button__text">Learn More</span>
         </div>
@@ -39,7 +45,7 @@ function AnimatedBtn() {
                 <div class="charactor__face2"></div>
             </div>
         </div>
-    </a>
+    </div>
 
 </div>
   )

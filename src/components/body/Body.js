@@ -166,7 +166,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
           }
         </section>
       </div>
-      <div>
+      <div id='about-me'>
         <div className='w-20 h-2.5 divider my-4 mt-32'></div>
         <h1 className="greeting-text">About Me</h1>
         <section className=' gap-20 flex flex-wrap mt-4 mb-20'>

@@ -678,7 +678,7 @@ body {
 }
 @media screen and (max-width: 640px) {
   .greeting-text  {
-      font-size: 31px;
+      font-size: 29px;
       line-height: 32px;
       margin-bottom: 8px;
       padding: 0px 0px 8px;
