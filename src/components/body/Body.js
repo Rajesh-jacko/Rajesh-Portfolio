@@ -82,7 +82,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
     { year: "2020", text: "Exhibited the frontend tools like Vue and React" },
     { year: "2021", text: "Completed college projects with Vuejs" },
     { year: "2022", text: "Completed B.Sc. CSIT program and started Internship" },
-    { year: "2023", text: "Employed as a Front-End Developer Elintegro.Inc" },
+    { year: "2023", text: "Employed as a Front-End Developer @Elintegro.Inc" },
   ];
 
 

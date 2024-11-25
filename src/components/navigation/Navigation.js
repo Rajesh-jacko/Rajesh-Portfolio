@@ -1,32 +1,39 @@
 import React from 'react';
-import logo from '../../assets/logo1-removebg.png'
+import logo from '../../assets/newLogo.png'
 import { FaInstagram, FaGithub, FaFacebook } from 'react-icons/fa'; // Importing social icons
 
 function Navigation() {
-  const smoothScroll = (props)=> {
+  const smoothScroll = (props) => {
     const element = document.getElementById(props);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-    
-    
+
+
   return (
     <div className="flex justify-between items-center p-2 md:p-4 lg:px-8">
       {/* Left Side: Logo */}
       <div>
-        <img src={logo} className="object-contain nav-btn h-20 w-25" alt="Logo" />
+        <a href="/">
+          <img
+            src={logo}
+            className="object-contain nav-btn h-20 w-25"
+            alt="Logo"
+            style={{ transform: 'translateY(7px)', cursor: 'pointer' }}
+          />
+        </a>
       </div>
 
       {/* Center: Clickable Text (Hidden on Mobile) */}
       <div className="hidden md:flex space-x-8">
-        <span  className="text-xl nav-btn" onClick={()=> { smoothScroll('project')} }>
+        <span className="text-xl nav-btn" onClick={() => { smoothScroll('project') }}>
           Projects
         </span>
-        <span className="text-xl nav-btn" onClick={()=> {smoothScroll('technologies')}}>
-           Technologies
+        <span className="text-xl nav-btn" onClick={() => { smoothScroll('technologies') }}>
+          Technologies
         </span>
-        <span  className="text-xl nav-btn" onClick={()=> {smoothScroll('about-me')}}>
+        <span className="text-xl nav-btn" onClick={() => { smoothScroll('about-me') }}>
           About Me
         </span>
       </div>
