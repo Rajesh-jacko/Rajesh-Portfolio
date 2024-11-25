@@ -5,6 +5,7 @@ body {
   font-family: 'Montserrat', 'sans-serif';
   color: white;
   font-weight: 500;
+  background-color: rgb(15, 22, 36);
 }
 
 .App {
