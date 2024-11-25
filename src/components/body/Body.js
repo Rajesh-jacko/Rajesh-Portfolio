@@ -173,7 +173,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
           <img
             src={rajesh}
             alt={rajesh}
-            className='w-80 h-auto object-contain'
+            className='w-80 h-auto object-contain sm:m-0 m-auto'
           />
           <p className='flex flex-col flex-wrap justify-center sm:gap-7 gap-4 font-light text-sm sm:text-base'>
             <span className='about-me'>Experienced in ReactJS,  VueJS and WordPress Development</span>
