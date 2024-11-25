@@ -613,10 +613,11 @@ body {
 .project-item:hover .project-title {
   color: #ffbf47;
 }
-.nav-btn {
+.nav-btn, .nav-social, .tools {
+  cursor: pointer;
   transition: transform 0.7s ease, color 0.2s linear,  ;
 }
-.nav-btn:hover {
+.nav-btn:hover, .nav-social:hover {
   transform: translateY(-6px);
 }
 .nav-btn:hover {
@@ -639,6 +640,20 @@ body {
 .timeline-year {
   background: linear-gradient(121.57deg, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0.66) 30.15%) text;
   -webkit-text-fill-color: transparent;
+}
+.tools:hover {
+  animation: bounce 2.3s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(-8px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Back to original position */
+  }
 }
 
 @keyframes colorChange {

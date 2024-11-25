@@ -50,12 +50,12 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
 
     { title: 'Coinatm', description: 'A cryptocurrency ATM solution for quick transactions.', image: coinatmImg, link: 'https://omnipay-dev.elintegro.com/' },
     { title: 'DammpSuite', description: 'A web application to make a profitable trade using their bot to trade.', image: dammpSuiteImg, link: 'https://ottomatictrading.com/' },
-    { title: 'AstroBabies', description: 'A fun and educational platform for kids to learn astronomy.', image: astroBabiesImg, link: 'https://astrobabies.io' },
+    { title: 'AstroBabies', description: 'A NFT Project with 3 big collections (Babies, Apes, Pups) on Solana blockchain.', image: astroBabiesImg, link: 'https://astrobabies.io' },
     { title: 'The LarpExplorer', description: 'An app which is build to fetch the real data from etherscan.', image: larpExplorerImg, link: 'https://thelarpexplorerbeta.netlify.app/' },
-    { title: 'DinoDames', description: 'A community-driven platform for dinosaur enthusiasts.', image: dinoDamesImg, link: 'https://dinodamesgameteaser.netlify.app/' },
+    { title: 'DinoDames', description: 'Dinodames is a NFT project of dinosaurs based on ETH blockchain.', image: dinoDamesImg, link: 'https://dinodamesgameteaser.netlify.app/' },
     { title: 'Elintegro', description: 'A seamless integration platform for enterprises with supervision.', image: elintegroImg, link: 'https://elintegro.com' },
     { title: 'HomeGlobe', description: 'A platform for renting homes to travelers offering booking experience.', image: homeGlobeImg, link: 'https://globech-dev.elintegro.com/login' },
-    { title: 'Msg Notification', description: 'A platform for renting homes to travelers offering booking experience.', image: msgNotifImg, link: 'https://msgnotification.elintegro.com/home/live' }
+    { title: 'Msg Notification', description: 'An application that provides  live chat support to customers.', image: msgNotifImg, link: 'https://msgnotification.elintegro.com/home/live' }
   ];
 
   const languages = [
@@ -111,17 +111,17 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
             <br />
             It's me, Rajesh Jacko.
           </h2>
-          <p className="max-w-[800px] text-2xl leading-[40px] font-light text-white/50">
+          <p className="max-w-[800px] sm:text-2xl text-xl leading-[40px] font-light text-white/50">
             Let’s build something amazing together!
           </p>
           <AnimatedBtn />
         </section>
       </div>
 
-      <div>
+      <div id='project'>
         <div className='w-20 h-2.5 divider my-4'></div>
         <h1 className="greeting-text">Projects</h1>
-        <section className='flex flex-wrap justify-center sm:justify-start gap-16 '>
+        <section className='flex flex-wrap justify-center sm:justify-start sm:gap-16 gap-3 '>
           {projects.map((project, index) => {
             return (
               <div key={index} className="project-item my-4 flex flex-wrap w-60 gap-2 justify-center m-3"
@@ -140,16 +140,16 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
           })}
         </section>
       </div>
-      <div>
+      <div id='technologies'>
         <div className='w-20 h-2.5 divider my-4 mt-32'></div>
         <h1 className="greeting-text">Technologies</h1>
-        <p className="max-w-[800px] text-2xl leading-[40px] font-light text-left text-white/50">
+        <p className="max-w-[800px] text-md sm:text-xl leading-[40px] font-light text-left text-white/50">
           I am a frontend developer with expertise in creating responsive, user-friendly interfaces using modern web technologies. My focus is on delivering seamless and engaging user experiences.
         </p>
         <p className="max-w-[800px] text-2xl leading-[40px] font-bold text-left text-white my-3">
           Languages and tools
         </p>
-        <section className='flex flex-wrap gap-10 align-center mt-6'>
+        <section className='flex flex-wrap gap-y-3 gap-5 sm:gap-10 align-center justify-around sm:justify-start mt-6'>
           {
             languages.map((language, index) => {
               return (
@@ -169,13 +169,13 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
       <div id='about-me'>
         <div className='w-20 h-2.5 divider my-4 mt-32'></div>
         <h1 className="greeting-text">About Me</h1>
-        <section className=' gap-20 flex flex-wrap mt-4 mb-20'>
+        <section className=' sm:gap-20 gap-8 flex flex-wrap mt-4 mb-20'>
           <img
             src={rajesh}
             alt={rajesh}
             className='w-80 h-auto object-contain'
           />
-          <p className='flex flex-col flex-wrap justify-center gap-7 font-light'>
+          <p className='flex flex-col flex-wrap justify-center sm:gap-7 gap-4 font-light text-sm sm:text-base'>
             <span className='about-me'>Experienced in ReactJS,  VueJS and WordPress Development</span>
             <span className='about-me'>Proficient in Smart Contract Deployment in ETH</span>
             <span className='about-me'>Developed Minting dApp for mining NFTs in SOlONA</span>
@@ -199,11 +199,11 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
       </div>
       <div className='w-auto h-0.5 text-white bg-slate-600 my-1 mt-20'></div>
       <div className='flex justify-between flex-wrap text-left gap-10 mt-16'>
-      <p className='flex flex-col'>
-        <span  className=' text-gray-300 mb-5'>PHONE</span>
+      <p className='flex flex-col tools'>
+        <span  className=' text-gray-300 mb-5 '>PHONE</span>
         <span>+977-9860465506</span>
         </p>
-        <p className='flex flex-col'>
+        <p className='flex flex-col tools'>
         <span  className=' text-gray-300 mb-5'>EMAIL</span>
         <span>rajeshjacko269@gmail.com</span>
         </p>
