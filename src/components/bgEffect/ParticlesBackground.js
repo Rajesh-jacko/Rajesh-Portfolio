@@ -1,38 +1,47 @@
+import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useState } from "react";
-// import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-// import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
-// import FireworkEffect from './FireworkEffect'
-// import HexagonEffect from "./HexagonEffect";
-// import StarsEffect from "./StarsEffect"
-// import TunnelEffect from "./TunnelEffect"
+import { loadFull } from "tsparticles";
+import FireworkEffect from "./FireworkEffect";
+import StarsEffect from "./StarsEffect";
+import TunnelEffect from "./TunnelEffect";
 import ColourEffect from "./ColourEffect";
-const ParticlesComponent = (props) => {
+import ConfettiEffect from "./Confetti";
 
+const effects = [ColourEffect,StarsEffect,TunnelEffect,ConfettiEffect, FireworkEffect];
+
+const ParticlesComponent = () => {
   const [init, setInit] = useState(false);
-  // this should be run only once per application lifetime
+  const [currentEffectIndex, setCurrentEffectIndex] = useState(0);
+
+  // Initialize particles engine
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
       await loadFull(engine);
-      // await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
+
+  const handleButtonClick = () => {
+    // Change to the next effect, looping back to the first one if at the end
+    setCurrentEffectIndex((prevIndex) => (prevIndex + 1) % effects.length);
+  };
+
   if (!init) {
     return null; // Or return a loading spinner, or some placeholder content
   }
 
-
-  return <Particles id="particles" options={ColourEffect}  />
-  ; 
+  return (
+    <div>
+      <Particles id="particles" options={effects[currentEffectIndex]} />
+      
+      
+      <div  className='blobs' onClick={handleButtonClick}>
+                <span></span>
+                <span></span>
+                </div>
+    </div>
+  );
 };
 
 export default ParticlesComponent;

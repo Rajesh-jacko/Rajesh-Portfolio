@@ -1,8 +1,8 @@
-const HexagonEffect = {
+const ConfettiEffect ={
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#000"
+        "value": ""
       },
       "image": "",
       "position": "",
@@ -25,7 +25,7 @@ const HexagonEffect = {
     "delay": 0,
     "fullScreen": {
       "enable": true,
-      "zIndex": -1
+      "zIndex": 0
     },
     "detectRetina": true,
     "duration": 0,
@@ -154,10 +154,10 @@ const HexagonEffect = {
     "particles": {
       "bounce": {
         "horizontal": {
-          "value": 1
+          "value": 0
         },
         "vertical": {
-          "value": 1
+          "value": 0
         }
       },
       "collisions": {
@@ -181,12 +181,12 @@ const HexagonEffect = {
         }
       },
       "color": {
-        "value": "#FF0000",
+        "value": "#f00",
         "animation": {
           "h": {
             "count": 0,
             "enable": true,
-            "speed": 10,
+            "speed": 30,
             "decay": 0,
             "delay": 0,
             "sync": true,
@@ -238,60 +238,54 @@ const HexagonEffect = {
           "mode": "percent",
           "radius": 0
         },
-        "decay": 0,
+        "decay": 0.1,
         "distance": {},
-        "direction": "none",
+        "direction": "top",
         "drift": 0,
         "enable": true,
         "gravity": {
           "acceleration": 9.81,
-          "enable": false,
+          "enable": true,
           "inverse": false,
-          "maxSpeed": 50
+          "maxSpeed": 200
         },
         "path": {
-          "clamp": false,
+          "clamp": true,
           "delay": {
             "value": 0
           },
-          "enable": true,
-          "options": {
-            "sides": 6,
-            "turnSteps": 30,
-            "angle": 30
-          },
-          "generator": "polygonPathGenerator"
+          "enable": false,
+          "options": {}
         },
         "outModes": {
           "default": "destroy",
           "bottom": "destroy",
           "left": "destroy",
           "right": "destroy",
-          "top": "destroy"
+          "top": "none"
         },
         "random": false,
         "size": false,
-        "speed": 3,
+        "speed": {
+          "min": 50,
+          "max": 150
+        },
         "spin": {
           "acceleration": 0,
           "enable": false
         },
         "straight": false,
         "trail": {
-          "enable": true,
-          "length": 20,
-          "fill": {
-            "color": {
-              "value": "#000"
-            }
-          }
+          "enable": false,
+          "length": 10,
+          "fill": {}
         },
         "vibrate": false,
         "warp": false
       },
       "number": {
         "density": {
-          "enable": true,
+          "enable": false,
           "width": 1920,
           "height": 1080
         },
@@ -334,7 +328,7 @@ const HexagonEffect = {
         "type": "circle"
       },
       "size": {
-        "value": 2,
+        "value": 3,
         "animation": {
           "count": 0,
           "enable": false,
@@ -376,27 +370,33 @@ const HexagonEffect = {
       },
       "roll": {
         "darken": {
-          "enable": false,
-          "value": 0
+          "enable": true,
+          "value": 30
         },
-        "enable": false,
+        "enable": true,
         "enlighten": {
-          "enable": false,
-          "value": 0
+          "enable": true,
+          "value": 30
         },
         "mode": "vertical",
-        "speed": 25
+        "speed": {
+          "min": 15,
+          "max": 25
+        }
       },
       "tilt": {
-        "value": 0,
+        "value": {
+          "min": 0,
+          "max": 360
+        },
         "animation": {
-          "enable": false,
-          "speed": 0,
+          "enable": true,
+          "speed": 60,
           "decay": 0,
           "sync": false
         },
-        "direction": "clockwise",
-        "enable": false
+        "direction": "random",
+        "enable": true
       },
       "twinkle": {
         "lines": {
@@ -411,10 +411,13 @@ const HexagonEffect = {
         }
       },
       "wobble": {
-        "distance": 5,
-        "enable": false,
+        "distance": 30,
+        "enable": true,
         "speed": {
-          "angle": 50,
+          "angle": {
+            "min": -15,
+            "max": 15
+          },
           "move": 10
         }
       },
@@ -430,14 +433,17 @@ const HexagonEffect = {
         }
       },
       "rotate": {
-        "value": 0,
+        "value": {
+          "min": 0,
+          "max": 360
+        },
         "animation": {
-          "enable": false,
-          "speed": 0,
+          "enable": true,
+          "speed": 60,
           "decay": 0,
           "sync": false
         },
-        "direction": "clockwise",
+        "direction": "random",
         "path": false
       },
       "orbit": {
@@ -503,8 +509,8 @@ const HexagonEffect = {
         "wait": false
       },
       "rate": {
-        "quantity": 1,
-        "delay": 0.25
+        "quantity": 10,
+        "delay": 0.1
       },
       "shape": {
         "options": {},
@@ -520,8 +526,14 @@ const HexagonEffect = {
         "height": 0,
         "width": 0
       },
-      "direction": "none",
-      "particles": {},
+      "particles": {
+        "links": {
+          "enable": false
+        },
+        "shape": {
+          "type": "circle"
+        }
+      },
       "position": {
         "x": 50,
         "y": 50
@@ -536,5 +548,6 @@ const HexagonEffect = {
     }
   }
   
-  export default HexagonEffect;
+  
+  export default ConfettiEffect;
   
