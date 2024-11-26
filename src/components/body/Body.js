@@ -103,7 +103,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
 
   
   return (
-    <div className='max-w-6xl p-4 m-auto' style={{marginTop:'-12px', paddingTop:'0'}}>
+    <div className='max-w-6xl p-4 m-auto' style={{marginTop:'-8px', paddingTop:'0'}}>
       <div className="text-left  h-[calc(100vh-112px)] overflow-y-auto flex flex-col items-start justify-center">
         <section>
           <h2 className="greeting-text">
@@ -178,7 +178,7 @@ function HomePage({ text = 'HAPPY CODING!!!' }) {
           <p className='flex flex-col flex-wrap justify-center sm:gap-7 gap-4 font-light text-sm sm:text-base'>
             <span className='about-me'>Experienced in ReactJS,  VueJS and WordPress Development</span>
             <span className='about-me'>Proficient in Smart Contract Deployment in ETH</span>
-            <span className='about-me'>Developed Minting dApp for mining NFTs in SOlONA</span>
+            <span className='about-me'>Developed Minting dApp for mining NFTs in SOLANA</span>
             <span className='about-me'>Adept at integrating Third-Party APIs</span>
             <span className='about-me'>Experience with MySQL for data storage and management
             </span>
